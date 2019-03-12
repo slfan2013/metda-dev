@@ -1,0 +1,9 @@
+<button mat-raised-button class="btn btn-rose">Activated Project:</button>
+<button mat-raised-button class="btn btn-just-icon btn-rose"matTooltip="change activated project" [matTooltipPosition]="'below'" data-toggle="modal" data-target="#myModal">
+  <i class="material-icons">compare_arrows</i>
+</button>
+<button mat-raised-button class="btn btn-just-icon btn-success"matTooltip="add a new project" [matTooltipPosition]="'below'" data-toggle="modal" data-target="#myModal" [routerLink]="[ {outlets: { modal: 'login' } } ]">
+    <i class="material-icons">add_circle_outline</i>
+  </button>
+
+  <router-outlet name="modal"></router-outlet>
