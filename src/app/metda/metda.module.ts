@@ -27,4 +27,4 @@ import { AutoAnalysisComponent } from './auto-analysis/auto-analysis.component';
   ]
 })
 
-export class MetdaModule {}
+export class MetdaModule { }

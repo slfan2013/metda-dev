@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-primary navbar-absolute" color-on-scroll="500">
   <div class="container">
     <div class="navbar-wrapper">
-      <a class="navbar-brand d-none d-sm-none d-md-block" [routerLink]="['/dashboard']">MetDA - Metabolomics Data Analysis</a>
+      <a class="navbar-brand d-none d-sm-none d-md-block" [routerLink]="['/dashboard']">MetDA - Metabolomics Data
+        Analysis</a>
     </div>
     <button mat-button class="navbar-toggler" type="button" (click)="sidebarToggle()">
       <span class="sr-only">Toggle navigation</span>
@@ -40,9 +41,11 @@
 
 
 <div class="wrapper wrapper-full-page">
-  <div class="page-header header-filter">
-    <div class="container">
-      <router-outlet></router-outlet>
+    <div class="page-header header-filter">
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
     </div>
-  </div>
 </div>
+
+<app-modal></app-modal>

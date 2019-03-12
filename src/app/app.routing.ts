@@ -6,7 +6,7 @@ import { MetdaLayoutComponent } from './layouts/metda-layout/metda-layout.compon
 export const AppRoutes: Routes = [
     {
       path: '',
-      redirectTo: 'dashboard',
+      redirectTo: 'metda',
       pathMatch: 'full',
     }, {
       path: '',

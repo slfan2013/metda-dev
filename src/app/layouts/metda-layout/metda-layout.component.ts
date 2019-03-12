@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-
+import { NavbarComponent } from '../../shared/navbar/navbar.component';
 @Component({
   selector: 'app-layout',
   templateUrl: './metda-layout.component.html'

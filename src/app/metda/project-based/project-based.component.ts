@@ -9,7 +9,8 @@ export class ProjectBasedComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+
+
+  ngOnInit(){}
 
 }

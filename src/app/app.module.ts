@@ -50,6 +50,8 @@ import { AuthLayoutComponent } from './layouts/auth/auth-layout.component';
 import { MetdaLayoutComponent } from './layouts/metda-layout/metda-layout.component';
 
 import { AppRoutes } from './app.routing';
+import { ModalComponent } from './modal/modal/modal.component';
+import { TestComponent } from './modal/test/test.component';
 
 @NgModule({
   exports: [
@@ -103,11 +105,16 @@ export class MaterialModule {}
         FooterModule,
         FixedpluginModule
     ],
+    exports:[
+        
+    ],
     declarations: [
         AppComponent,
         AdminLayoutComponent,
         AuthLayoutComponent,
-        MetdaLayoutComponent
+        MetdaLayoutComponent,
+        ModalComponent,
+        TestComponent
     ],
     bootstrap:    [ AppComponent ]
 })

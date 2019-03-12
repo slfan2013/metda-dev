@@ -1,0 +1,26 @@
+<p>
+  modal works!
+</p>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{{modalTitle}}</h4>
+        <button mat-button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <i class="material-icons">clear</i>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <app-test (fromChild)="initFromChild($event)"></app-test>
+      </div>
+
+      <div class="modal-footer">
+        <button mat-raised-button type="button" class="btn btn-link">Nice Button</button>
+        <button mat-raised-button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
