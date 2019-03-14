@@ -12,15 +12,9 @@
           <i class="material-icons">clear</i>
         </button>
       </div>
-      
-      <div class="modal-body">
-        <app-test (fromChild)="initFromChild($event)"></app-test>
-      </div>
 
-      <div class="modal-footer">
-        <button mat-raised-button type="button" class="btn btn-link">Nice Button</button>
-        <button mat-raised-button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
-      </div>
+      <app-test (emitFromChild)="initFromChild($event)"></app-test>
+
     </div>
   </div>
 </div>
