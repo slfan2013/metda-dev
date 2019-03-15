@@ -52,6 +52,8 @@ import { MetdaLayoutComponent } from './layouts/metda-layout/metda-layout.compon
 import { AppRoutes } from './app.routing';
 import { ModalComponent } from './modal/modal/modal.component';
 import { TestComponent } from './modal/test/test.component';
+import * as $ from 'jquery';
+import { HttpClientModule }    from '@angular/common/http';
 
 @NgModule({
   exports: [
@@ -103,7 +105,8 @@ export class MaterialModule {}
         SidebarModule,
         NavbarModule,
         FooterModule,
-        FixedpluginModule
+        FixedpluginModule,
+        HttpClientModule
     ],
     exports:[
         

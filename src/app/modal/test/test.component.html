@@ -2,22 +2,22 @@
   <ol>
     <li>
       upload a root dataset
-      <!--<div class="fileinput fileinput-new text-center" data-provides="fileinput">
-          <div class="fileinput-preview fileinput-exists thumbnail"></div>
-          <div>
-              <span class="btn btn-rose btn-round btn-file">
-                  <span class="fileinput-new">Select image</span>
-                  <span class="fileinput-exists">Change</span>
-                  <input type="file" name="fileToUpload" accept=".xlsx,.csv">
-              </span>
-          <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
-          </div>
-      </div>-->
       <input id = "input" type="file" (change)="check_uploaded_data_format()">
+      <button (click)="remove_uploaded_data()" *ngIf="data_uploaded">Remove</button>
+      <ul *ngIf="data_uploaded">
+          <li *ngFor="let success_message of success_messages; let i = index" class="text-success">
+            {{success_message}}
+          </li>
+      </ul>
+      <ul *ngIf="data_uploaded">
+          <li *ngFor="let warning_message of warning_messages; let i = index" class="text-warning">
+            {{warning_message}}
+          </li>
+      </ul>
     </li>
-    <li>
+    <li *ngIf="data_uploaded">
       give the project a name
-      <input type="text" value="" placeholder="name of the project" class="form-control" [(ngModel)]="new_project_name"  />
+      <input type="text" value="" placeholder="name of the project" class="form-control" [(ngModel)]="new_project_name"  autofocus/>
     </li>
   </ol>
 
@@ -25,6 +25,6 @@
 </div>
 
 <div class="modal-footer">
-  <button mat-raised-button type="button" class="btn btn-link" data-dismiss="modal">Nice Button</button>
-  <button mat-raised-button type="button" class="btn btn-rose btn-link" (click)="createNewProject()">Create New Project</button>
+  <button mat-raised-button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+  <button mat-raised-button type="button" class="btn btn-rose btn-link" (click)="createNewProject()"  *ngIf="data_uploaded">Create New Project</button>
 </div>
